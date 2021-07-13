@@ -109,7 +109,7 @@ namespace osu.Game.Screens.Menu
             textFlow.NewParagraph();
 
             textFlow.AddText("not recommended ", formatRegular);
-            textFlow.AddText("for computers", t =>
+            textFlow.AddText("for any computers", t =>
             {
                 t.Font = t.Font.With(Typeface.Torus, 20, FontWeight.SemiBold);
                 t.Colour = colours.Pink;
@@ -137,13 +137,13 @@ namespace osu.Game.Screens.Menu
 
                 if (e.NewValue.IsSupporter)
                 {
-                    supportFlow.AddText("Eternal thanks to you for supporting osu!", formatSemiBold);
+                    supportFlow.AddText("Thanks for supporting the original game!", formatSemiBold);
                 }
                 else
                 {
                     supportFlow.AddText("Consider becoming an ", formatSemiBold);
                     supportFlow.AddLink("osu!supporter", "https://osu.ppy.sh/home/support", formatSemiBold);
-                    supportFlow.AddText(" to help support osu!'s development", formatSemiBold);
+                    supportFlow.AddText(" to help support the original game's development", formatSemiBold);
                 }
 
                 heart = supportFlow.AddIcon(FontAwesome.Solid.Heart, t =>
