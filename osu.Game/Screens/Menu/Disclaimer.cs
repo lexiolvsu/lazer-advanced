@@ -95,7 +95,7 @@ namespace osu.Game.Screens.Menu
                 },
             };
 
-            textFlow.AddText("this is osu!", t => t.Font = t.Font.With(Typeface.Torus, 30, FontWeight.Regular));
+            textFlow.AddText("this is an advanced build of osu!", t => t.Font = t.Font.With(Typeface.Torus, 30, FontWeight.Regular));
 
             expendableText.AddRange(textFlow.AddText("lazer", t =>
             {
@@ -108,13 +108,13 @@ namespace osu.Game.Screens.Menu
 
             textFlow.NewParagraph();
 
-            textFlow.AddText("the next ", formatRegular);
-            textFlow.AddText("major update", t =>
+            textFlow.AddText("not recommended ", formatRegular);
+            textFlow.AddText("for computers", t =>
             {
                 t.Font = t.Font.With(Typeface.Torus, 20, FontWeight.SemiBold);
                 t.Colour = colours.Pink;
             });
-            expendableText.AddRange(textFlow.AddText(" coming to osu!", formatRegular));
+            expendableText.AddRange(textFlow.AddText(" that are slow", formatRegular));
             textFlow.AddText(".", formatRegular);
 
             textFlow.NewParagraph();
