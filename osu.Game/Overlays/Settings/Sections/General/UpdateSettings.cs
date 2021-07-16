@@ -1,4 +1,4 @@
-﻿// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
+// Copyright (c) ppy Pty Ltd <contact@ppy.sh>. Licensed under the MIT Licence.
 // See the LICENCE file in the repository root for full licence text.
 
 using System.Threading.Tasks;
@@ -43,12 +43,20 @@ namespace osu.Game.Overlays.Settings.Sections.General
                     Text = "Check for updates",
                     Action = () =>
                     {
-                      notifications?.Post(new SimpleNotification
-                      {
-                       Text = $"Please restart to check for updates.",
-                       Icon = FontAwesome.Solid.CheckCircle,
-                      });
-                     }
+                        checkForUpdatesButton.Enabled.Value = false;
+                        Task.Run(updateManager.CheckForUpdateAsync).ContinueWith(t => Schedule(() =>
+                        {
+                            if (!t.Result)
+                            {
+                                notifications?.Post(new SimpleNotification
+                                {
+                                    Text = $"You are running the latest release ({game.Version})",
+                                    Icon = FontAwesome.Solid.CheckCircle,
+                                });
+                            }
+
+                            checkForUpdatesButton.Enabled.Value = true;
+                        }));
                     }
                 });
             }
