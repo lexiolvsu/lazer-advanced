@@ -1,6 +1,10 @@
 # the osu! advancement project
-a project all about advancing osu!.
-
+a project all about advancing the open source side of osu!
+## the advanced:// protocol
+osu!advanced's web side would never be used by domains, but by a special protocol.
+coming soon.
+## readme.md files
+the readmes for each repository (or in this case, each branch), because why not.
 ## osu/master
 <p align="center">
   <img width="500px" src="assets/lazer.png">
