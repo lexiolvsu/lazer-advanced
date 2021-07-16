@@ -43,20 +43,12 @@ namespace osu.Game.Overlays.Settings.Sections.General
                     Text = "Check for updates",
                     Action = () =>
                     {
-                        checkForUpdatesButton.Enabled.Value = false;
-                        Task.Run(updateManager.CheckForUpdateAsync).ContinueWith(t => Schedule(() =>
-                        {
-                            if (!t.Result)
-                            {
-                                notifications?.Post(new SimpleNotification
-                                {
-                                    Text = $"You are running the latest release ({game.Version})",
-                                    Icon = FontAwesome.Solid.CheckCircle,
-                                });
-                            }
-
-                            checkForUpdatesButton.Enabled.Value = true;
-                        }));
+                      notifications?.Post(new SimpleNotification
+                      {
+                       Text = $"Please restart to check for updates.",
+                       Icon = FontAwesome.Solid.CheckCircle,
+                      });
+                     }
                     }
                 });
             }
@@ -65,7 +57,7 @@ namespace osu.Game.Overlays.Settings.Sections.General
             {
                 Add(new SettingsButton
                 {
-                    Text = "Open osu! folder",
+                    Text = "Open osu!advanced folder",
                     Action = storage.OpenInNativeExplorer,
                 });
 
