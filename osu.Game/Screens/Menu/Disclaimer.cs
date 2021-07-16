@@ -97,24 +97,18 @@ namespace osu.Game.Screens.Menu
 
             textFlow.AddText("this is an advanced build of osu!lazer", t => t.Font = t.Font.With(Typeface.Torus, 30, FontWeight.Regular));
 
-            expendableText.AddRange(textFlow.AddText("", t =>
-            {
-                t.Font = t.Font.With(Typeface.Torus, 30, FontWeight.Regular);
-                t.Colour = colours.PinkLight;
-            }));
-
             static void formatRegular(SpriteText t) => t.Font = OsuFont.GetFont(size: 20, weight: FontWeight.Regular);
             static void formatSemiBold(SpriteText t) => t.Font = OsuFont.GetFont(size: 20, weight: FontWeight.SemiBold);
 
             textFlow.NewParagraph();
 
             textFlow.AddText("not recommended ", formatRegular);
-            textFlow.AddText("for any computers", t =>
+            textFlow.AddText("for any computer", t =>
             {
                 t.Font = t.Font.With(Typeface.Torus, 20, FontWeight.SemiBold);
                 t.Colour = colours.Pink;
             });
-            expendableText.AddRange(textFlow.AddText(" that are slow", t =>
+            expendableText.AddRange(textFlow.AddText("s that are slow", t =>
             {
                 t.Font = t.Font.With(Typeface.Torus, 20, FontWeight.SemiBold);
                 t.Colour = colours.Pink;
