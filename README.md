@@ -1,5 +1,7 @@
 # the osu! advancement project
-a project all about advancing the open source side of osu!
+a project all about advancing the open source side of osu! and the not-so-open-source side of peppy related things.
+look in the branches to find what you're looking for.
+
 ## the advanced:// protocol
 osu!advanced's web side would never be used by domains, but by a special protocol.
 coming soon.
