@@ -1,8 +1,10 @@
+# the osu! advancement project
+a project all about advancing osu!.
+
+## osu/master
 <p align="center">
   <img width="500px" src="assets/lazer.png">
 </p>
-
-# osu!
 
 [![Build status](https://ci.appveyor.com/api/projects/status/u2p01nx7l6og8buh?svg=true)](https://ci.appveyor.com/project/peppy/osu)
 [![GitHub release](https://img.shields.io/github/release/ppy/osu.svg)](https://github.com/ppy/osu/releases/latest)
@@ -13,7 +15,7 @@ A free-to-win rhythm game. Rhythm is just a *click* away!
 
 The future of [osu!](https://osu.ppy.sh) and the beginning of an open era! Currently known by and released under the codename "*lazer*". As in sharper than cutting-edge.
 
-## Status
+### Status
 
 This project is under heavy development, but is in a stable state. Users are encouraged to try it out and keep it installed alongside the stable *osu!* client. It will continue to evolve to the point of eventually replacing the existing stable client as an update.
 
@@ -25,7 +27,7 @@ We are accepting bug reports (please report with as much detail as possible and 
 - You can learn more about our approach to [project management](https://github.com/ppy/osu/wiki/Project-management).
 - Read peppy's [blog post](https://blog.ppy.sh/a-definitive-lazer-faq/) exploring where the project is currently and the roadmap going forward.
 
-## Running osu!
+### Running osu!
 
 If you are looking to install or test osu! without setting up a development environment, you can consume our [binary releases](https://github.com/ppy/osu/releases). Handy links below will download the latest version for your operating system of choice:
 
