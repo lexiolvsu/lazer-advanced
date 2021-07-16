@@ -1,2 +1,0 @@
-[*.cs]
-dotnet_diagnostic.OLOC001.prefix_namespace = osu.Game.Resources.Localisation
